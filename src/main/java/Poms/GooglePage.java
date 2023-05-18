@@ -62,7 +62,7 @@ public class GooglePage {
 		}
 	}
 	
-	public void print1() {//imprime todos los resultados
+	public void print1() {//imprime texto
 		List <WebElement> list = driver.findElements(By.xpath(imprime1));
 		
 		for(WebElement element: list) {
@@ -70,7 +70,7 @@ public class GooglePage {
 		}
 	}
 	
-	public void print2() {//imprime todos los resultados
+	public void print2() {//imprime texto
 		List <WebElement> list = driver.findElements(By.xpath(imprime2));
 		
 		for(WebElement element: list) {
@@ -78,11 +78,13 @@ public class GooglePage {
 		}
 	}
 	
-	public void print3() {//imprime todos los resultados
+	public void print3() {//imprime texto
 		List <WebElement> list = driver.findElements(By.xpath(imprime3));
 		
 		for(WebElement element: list) {
 			System.out.println(element.getText());
 		}
 	}
+	
+	
 }
