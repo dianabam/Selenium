@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class TAP {
 
@@ -12,6 +13,9 @@ public class TAP {
 	String alertButtonXpath  = "//button[text()='Click Me']";
 	String imprimeAcept = "//*[@id=\"demo\"]";
 	String imprimeCancel = "//*[@id=\"demo\"]";
+	String fileXpath = "//select[@name='files']";
+	String speedXpath = "//*[@id=\"speed\"]";
+	String indexXpath = "//*[@id=\"number\"]";
 	 
 	public TAP(WebDriver driver) {
 		super();
@@ -46,5 +50,40 @@ public class TAP {
 		for(WebElement element: list) {
 			System.out.println(element.getText());
 		}
+	}
+	
+	public String selectCheckBoxByValue(String option) {
+		String value = "";
+		Select cb = new Select(this.driver.findElement(By.xpath(fileXpath)));		
+		cb.selectByValue(option);
+		
+		List <WebElement> options = cb.getAllSelectedOptions();
+		for(WebElement element: options) {
+			System.out.println(element.getText());
+		}
+		
+		return value;
+	}
+	
+	public String selectCheckBoxByText(String option) {
+		String value = "";
+		Select cb = new Select(this.driver.findElement(By.xpath(speedXpath)));
+		cb.selectByVisibleText(option);
+		List <WebElement> options = cb.getAllSelectedOptions();
+		for(WebElement element: options) {
+			System.out.println(element.getText());
+		}
+		return value;
+	}
+	
+	public String selectCheckBoxByIndex (int option) {
+		String value = "";
+		Select cb = new Select(this.driver.findElement(By.xpath(indexXpath)));
+		cb.selectByIndex(option);
+		List <WebElement> options = cb.getAllSelectedOptions();
+		for(WebElement element: options) {
+			System.out.println(element.getText());
+		}
+		return value;
 	}
 }

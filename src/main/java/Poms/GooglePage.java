@@ -22,17 +22,13 @@ public class GooglePage {
 		super();
 		this.driver = driver;
 	}
-	
-	public GooglePage() {
-		
-	}
 
-	public void typeOnSearchBar(String value) {
-		
+	public void typeOnSearchBar(String value) {	 //busca en la barra
 		WebElement searchBar = driver.findElement(By.id(searchBarId));
 		searchBar.sendKeys(value);
 		searchBar.sendKeys(Keys.ENTER);
 	}
+	
 	public void clickFirstResult() {
 		WebElement fr = driver.findElement(By.xpath(firstResult));//buqueda por xpath
 		fr.click();
@@ -45,7 +41,6 @@ public class GooglePage {
 	}
 	
 	public void clickResultById(int result) {
-		
 		List <WebElement> list = driver.findElements(By.xpath(resultClass));
 		list.get(result).click();//obtiene el elemento result
 	}
