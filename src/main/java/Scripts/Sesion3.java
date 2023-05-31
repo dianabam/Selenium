@@ -49,7 +49,7 @@ public class Sesion3 {
 	@After
 	public void teardown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 
