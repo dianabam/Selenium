@@ -17,6 +17,7 @@ public class GooglePage {
 	String imprime1 = "//*[@id=\"mw-content-text\"]/div[1]/p[1]";
 	String imprime2 = "//*[@id=\"mw-content-text\"]/div[1]/p[3]";
 	String imprime3 = "//*[@id=\"mw-content-text\"]/div[1]/p[4]";
+	String BuscaWiki = "//*[@id=\"Wikipedia1_wikipedia-search-form\"]/div/span[1]/a";
 
 	public GooglePage(WebDriver driver) {
 		super();
@@ -81,5 +82,11 @@ public class GooglePage {
 		}
 	}
 	
+	
+	public void clickwiki() {
+		WebElement fr = driver.findElement(By.xpath(BuscaWiki));//buqueda por xpath
+		fr.click();
+		
+	}
 	
 }

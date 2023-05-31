@@ -1,5 +1,6 @@
 package Poms;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -65,6 +66,7 @@ public class TAP {
 		return value;
 	}
 	
+	
 	public String selectCheckBoxByText(String option) {
 		String value = "";
 		Select cb = new Select(this.driver.findElement(By.xpath(speedXpath)));
@@ -75,6 +77,8 @@ public class TAP {
 		}
 		return value;
 	}
+	
+	
 	
 	public String selectCheckBoxByIndex (int option) {
 		String value = "";
