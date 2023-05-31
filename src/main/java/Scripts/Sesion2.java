@@ -45,7 +45,7 @@ public class Sesion2 {
 	@After
 	public void teardown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 	public Sesion2() {
