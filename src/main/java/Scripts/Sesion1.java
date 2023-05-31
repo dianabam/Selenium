@@ -40,7 +40,7 @@ public class Sesion1 {
 	@After
 	public void teardown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 	public Sesion1() {
 		// TODO Auto-generated constructor stub
