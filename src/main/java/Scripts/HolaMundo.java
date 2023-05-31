@@ -36,6 +36,6 @@ public class HolaMundo {
 	@After
 	public void teardown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 }
