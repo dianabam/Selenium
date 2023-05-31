@@ -14,7 +14,7 @@ public class GooglePage {
 	String firstResult= "//h3[text()='Wikipedia']";
 	String SecondResult= "//*[@id='firstHeading']/span";
 	String resultClass = "//h3[@class='LC20lb MBeuO DKV0Md']";
-	String imprime1 = "//*[@id=\"mw-content-text\"]/div[1]/p[1]";
+	String imprime1 = "//*[@id=\"mw-content-text\"]/div[1]/p[2]";
 	String imprime2 = "//*[@id=\"mw-content-text\"]/div[1]/p[3]";
 	String imprime3 = "//*[@id=\"mw-content-text\"]/div[1]/p[4]";
 	String BuscaWiki = "//*[@id=\"Wikipedia1_wikipedia-search-form\"]/div/span[1]/a";
